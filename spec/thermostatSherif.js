@@ -55,4 +55,9 @@ describe('Checking if', function(){
     thermostat.reset();
     expect(thermostat.temprature).toEqual (20);
   });
+
+  it ('get current energy usage for less than 18', function(){
+    thermostat.down(3);
+    expect(thermostat.ceu()).toEqual('low-usage');
+  });
 });
