@@ -23,8 +23,8 @@ Thermostat.prototype.reset = function(){
 }
 
 Thermostat.prototype.ceu = function(){
-  return "low-usage";
+  var temp = this.temprature;
+  return  temp < 18 ? "low-usage" : temp < 25 ? "medium-usage" : "high-usage";
 }
-
 
 module.exports = Thermostat;
