@@ -22,5 +22,9 @@ Thermostat.prototype.reset = function(){
   this.temprature = 20;
 }
 
+Thermostat.prototype.ceu = function(){
+  return "low-usage";
+}
+
 
 module.exports = Thermostat;
