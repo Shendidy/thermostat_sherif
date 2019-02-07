@@ -27,4 +27,8 @@ Thermostat.prototype.ceu = function(){
   return  temp < 18 ? "low-usage" : temp < 25 ? "medium-usage" : "high-usage";
 }
 
+Thermostat.prototype.psm_switch = function(){
+  this.power_saving_mode = !this.power_saving_mode;
+}
+
 module.exports = Thermostat;
