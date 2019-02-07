@@ -38,7 +38,7 @@ describe('Checking if', function(){
   });
 
   it('power_saving_mode is on', function(){
-    expect(thermostat.power_saving_mode).toEqual(true);
+    expect(thermostat.getCurrentPowerSavingMode()).toEqual(true);
   });
 
   it('max temprature if power_saving_mode on is 25', function(){
@@ -47,7 +47,7 @@ describe('Checking if', function(){
   });
 
   it('max temprature if power_saving_mode off is 32', function(){
-    thermostat.power_saving_mode = false;
+    thermostat.psmSwitch();
     thermostat.up(15);
     expect(thermostat.getCurrentTemprature()).toEqual(32);
   });
@@ -74,7 +74,7 @@ describe('Checking if', function(){
   });
 
   it ('switch the power saving mode on and off', function(){
-    thermostat.psm_switch();
-    expect(thermostat.power_saving_mode).toEqual(false);
+    thermostat.psmSwitch();
+    expect(thermostat.getCurrentPowerSavingMode()).toEqual(false);
   });
 });
