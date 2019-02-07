@@ -8,6 +8,9 @@ Thermostat.prototype.up = function(by){
   if(this.power_saving_mode){
     if(this.temprature > 25){this.temprature = 25;}
   }
+  else{
+    if(this.temprature > 32){this.temprature = 32;}
+  }
 }
 
 Thermostat.prototype.down = function(by){

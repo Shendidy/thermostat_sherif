@@ -43,4 +43,16 @@ describe('Checking if', function(){
     thermostat.up(15);
     expect(thermostat.temprature).toEqual(25);
   });
+
+  it('max temprature if power_saving_mode off is 32', function(){
+    thermostat.power_saving_mode = false;
+    thermostat.up(15);
+    expect(thermostat.temprature).toEqual(32);
+  });
+
+  it('set temprature to 20 by using the reset function', function(){
+    thermostat.up(30);
+    thermostat.reset();
+    expect(thermostat.temprature).toEqual (20);
+  });
 });
