@@ -1,3 +1,5 @@
+'use strickt';
+
 function Thermostat(temp){
   this.temprature = temp || 20;
   this.power_saving_mode = true;

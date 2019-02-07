@@ -1,3 +1,5 @@
+'use strict';
+
 var Thermostat = require('../src/thermostat');
 
 describe('Checking if', function(){
@@ -61,12 +63,12 @@ describe('Checking if', function(){
     expect(thermostat.ceu()).toEqual('low-usage');
   });
 
-  it ('get current energy usage for less than 18', function(){
+  it ('get current energy usage for less than 25', function(){
     thermostat.up(3);
     expect(thermostat.ceu()).toEqual('medium-usage');
   });
 
-  it ('get current energy usage for less than 18', function(){
+  it ('get current energy usage for higher than 24', function(){
     thermostat.up(6);
     expect(thermostat.ceu()).toEqual('high-usage');
   });
