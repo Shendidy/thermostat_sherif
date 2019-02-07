@@ -60,4 +60,14 @@ describe('Checking if', function(){
     thermostat.down(3);
     expect(thermostat.ceu()).toEqual('low-usage');
   });
+
+  it ('get current energy usage for less than 18', function(){
+    thermostat.up(3);
+    expect(thermostat.ceu()).toEqual('medium-usage');
+  });
+
+  it ('get current energy usage for less than 18', function(){
+    thermostat.up(6);
+    expect(thermostat.ceu()).toEqual('high-usage');
+  });
 });
