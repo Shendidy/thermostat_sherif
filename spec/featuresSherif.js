@@ -19,4 +19,14 @@ describe('Checking if', function(){
     thermostat.up(3);
     expect(thermostat.temprature).toEqual (23);
   });
+
+  it('down function decreases temp by 1', function(){
+    thermostat.down();
+    expect(thermostat.temprature).toEqual (19);
+  });
+
+  it('up function decreases temp by given value', function(){
+    thermostat.down(3);
+    expect(thermostat.temprature).toEqual (17);
+  });
 });

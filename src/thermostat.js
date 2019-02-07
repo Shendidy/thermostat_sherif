@@ -6,5 +6,9 @@ Thermostat.prototype.up = function(by){
   this.temprature += by || 1;
 }
 
+Thermostat.prototype.down = function(by){
+  this.temprature -= by || 1;
+}
+
 
 module.exports = Thermostat;
