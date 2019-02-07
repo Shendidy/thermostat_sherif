@@ -70,4 +70,9 @@ describe('Checking if', function(){
     thermostat.up(6);
     expect(thermostat.ceu()).toEqual('high-usage');
   });
+
+  it ('switch the power saving mode on and off', function(){
+    thermostat.psm_switch();
+    expect(thermostat.power_saving_mode).toEqual(false);
+  });
 });
