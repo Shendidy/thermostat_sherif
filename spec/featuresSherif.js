@@ -29,4 +29,9 @@ describe('Checking if', function(){
     thermostat.down(3);
     expect(thermostat.temprature).toEqual (17);
   });
+
+  it('minimum temprature is 10', function(){
+    thermostat.down(11);
+    expect(thermostat.temprature).toEqual(10);
+  });
 });

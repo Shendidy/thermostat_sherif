@@ -8,6 +8,7 @@ Thermostat.prototype.up = function(by){
 
 Thermostat.prototype.down = function(by){
   this.temprature -= by || 1;
+  if (this.temprature < 10){this.temprature = 10;}
 }
 
 
