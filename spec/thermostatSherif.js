@@ -34,4 +34,8 @@ describe('Checking if', function(){
     thermostat.down(11);
     expect(thermostat.temprature).toEqual(10);
   });
+
+  it('powermode is on', function(){
+    expect(thermostat.power_mode).toEqual(true);
+  });
 });

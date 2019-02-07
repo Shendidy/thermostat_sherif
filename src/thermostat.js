@@ -1,5 +1,6 @@
 function Thermostat(temp){
   this.temprature = temp || 20;
+  this.power_mode = true;
 }
 
 Thermostat.prototype.up = function(by){
