@@ -18,5 +18,9 @@ Thermostat.prototype.down = function(by){
   if (this.temprature < 10){this.temprature = 10;}
 }
 
+Thermostat.prototype.reset = function(){
+  this.temprature = 20;
+}
+
 
 module.exports = Thermostat;
