@@ -35,7 +35,12 @@ describe('Checking if', function(){
     expect(thermostat.temprature).toEqual(10);
   });
 
-  it('powermode is on', function(){
-    expect(thermostat.power_mode).toEqual(true);
+  it('power_saving_mode is on', function(){
+    expect(thermostat.power_saving_mode).toEqual(true);
+  });
+
+  it('max temprature if power_saving_mode on is 25', function(){
+    thermostat.up(15);
+    expect(thermostat.temprature).toEqual(25);
   });
 });

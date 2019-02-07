@@ -1,10 +1,13 @@
 function Thermostat(temp){
   this.temprature = temp || 20;
-  this.power_mode = true;
+  this.power_saving_mode = true;
 }
 
 Thermostat.prototype.up = function(by){
   this.temprature += by || 1;
+  if(this.power_saving_mode){
+    if(this.temprature > 25){this.temprature = 25;}
+  }
 }
 
 Thermostat.prototype.down = function(by){
