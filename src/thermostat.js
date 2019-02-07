@@ -33,4 +33,8 @@ Thermostat.prototype.psm_switch = function(){
   this.power_saving_mode = !this.power_saving_mode;
 }
 
+Thermostat.prototype.getCurrentTemprature = function (){
+  return this.temprature;
+}
+
 module.exports = Thermostat;
