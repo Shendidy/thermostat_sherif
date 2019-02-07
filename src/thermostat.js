@@ -48,4 +48,4 @@ Thermostat.prototype.getCurrentPowerSavingMode = function(){
   return this._power_saving_mode;
 }
 
-module.exports = Thermostat;
+// module.exports = Thermostat;
