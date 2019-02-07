@@ -1,0 +1,39 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/thermo2.css" />
+</head>
+<body>
+  <div id = 'divBody' >
+    <h1>Thermostat</h1>
+    <label>Current temperature: </label>
+    <label>show current temp</label>
+    <div id = 'PSMdiv'>
+      <div id = 'PSMlbl'>
+        <label>Power Saving Mode</label>
+      </div>
+      <div id = 'PSMSwitch' >
+        <label class="switch">
+          <input type="checkbox" checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div id = 'upDownButtons' >
+      <form action = '../' method = '' >
+        <input type = 'submit' value = 'UP' />
+        <label type = 'hidden' name = 'changeBy' />
+      </form>
+      <input type = 'text' placeholder = 'Change by?' />
+      <form action = '' method = '' >
+        <input type = 'submit' value = 'DOWN' />
+        <label type = 'hidden' name = 'changeBy' />
+      </form>
+      <form action = ''>
+        <input type = 'submit' value = 'RESET' />
+      </form>
+    </div>
+    <label>Current Energy Usage: </label>
+    <label id = 'CEU'> LEVEL </label>
+  </div>
+</body>
+</html>

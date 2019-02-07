@@ -74,7 +74,10 @@ describe('Checking if', function(){
   });
 
   it ('switch the power saving mode on and off', function(){
+    expect(thermostat.getCurrentPowerSavingMode()).toEqual(true);
     thermostat.psmSwitch();
     expect(thermostat.getCurrentPowerSavingMode()).toEqual(false);
+    thermostat.psmSwitch();
+    expect(thermostat.getCurrentPowerSavingMode()).toEqual(true);
   });
 });
