@@ -9,7 +9,9 @@
   <script type="text/javascript" src="./src/thermostat.js"></script>
 
   <!-- jQuery -->
-  <script type="text/javascript" src="./jQuery/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./jQuery/jquery-3.3.1.min.js">
+  </script>
+  <script type="text/javascript" src="./jQuery/interface.js";></script>
 
 </head>
 
@@ -17,19 +19,20 @@
   <div class="outerFrame">
     <h1>Thermostat</h1>
     <button type="button" class="btn btn-outline-info" id="upBtn" >UP</button>
+    <span>
+      <input type="text" placeholder="by?" id="inputSmall">
+    </span>
     <button type="button" class="btn btn-outline-info" id="downBtn" >DOWN</button>
 
-    <div class="form-group">
-      <input class="form-control form-control-sm" type="text" placeholder="by?" id="inputSmall">
-    </div>
+
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center">
         Current Temperature
-        <span class="badge badge-primary badge-pill">14</span>
+        <span class="badge badge-primary badge-pill" id="currentTemperature">xxx</span>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        Current Energy Usage
-        <span class="badge badge-primary badge-pill">2</span>
+        Energy Usage 
+        <span class="badge badge-primary badge-pill" id="currentEnergyUsage">xxx</span>
       </li>
     </ul>
 

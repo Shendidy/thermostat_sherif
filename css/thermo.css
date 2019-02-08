@@ -27,7 +27,7 @@ body {
   background: lightblue;
   width: 80px;
   position: relative;
-  left: -45px;
+  left: -20px;
   margin-bottom: 15px;
 }
 
@@ -35,7 +35,7 @@ body {
   background: lightblue;
   width: 80px;
   position: relative;
-  left: 45px;
+  left: 20px;
   margin-bottom: 15px;
 }
 
@@ -48,7 +48,8 @@ body {
 }
 
 #inputSmall {
-  width: 100%;
+  max-width: 40px;
+  height: 35px;
   margin-bottom: 15px;
 }
 
