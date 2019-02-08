@@ -1,6 +1,6 @@
 'use strict';
 
-// var Thermostat = require('../src/thermostat');
+var Thermostat = require('../src/thermostat');
 
 describe('Checking if', function(){
   var thermostat;
@@ -56,6 +56,16 @@ describe('Checking if', function(){
     thermostat.up(30);
     thermostat.reset();
     expect(thermostat.getCurrentTemprature()).toEqual (20);
+  });
+
+  it('set Power Saving Mode to on by using the reset function', function(){
+    thermostat.up(30);
+    expect(thermostat.getCurrentTemprature()).toEqual (25);
+    thermostat.psmSwitch();
+    expect(thermostat.getCurrentPowerSavingMode()).toEqual (false);
+    thermostat.reset();
+    expect(thermostat.getCurrentTemprature()).toEqual (20);
+    expect(thermostat.getCurrentPowerSavingMode()).toEqual (true);
   });
 
   it ('get current energy usage for less than 18', function(){

@@ -13,12 +13,14 @@ body {
   background-color: white;
 }
 
-#resetBtn {
-  margin-top: 15px;
+.form-group {
+  width: 80px;
+  margin: auto;
 }
 
-#resetBtn:hover {
-  background: darkred;
+.list-group {
+  width: 250px;
+  margin: auto;
 }
 
 #upBtn {
@@ -46,6 +48,7 @@ body {
 }
 
 #inputSmall {
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -55,4 +58,13 @@ body {
 
 #switchDiv {
   margin-top: 15px;
+}
+
+#resetBtn {
+  width: 80px;
+  margin-top: 15px;
+}
+
+#resetBtn:hover {
+  background: darkred;
 }
