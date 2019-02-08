@@ -17,6 +17,12 @@ $(document).ready(function(){
     setDisplay();
   });
 
+  $('#resetBtn').click(function(){
+    thermo.reset();
+    document.getElementById('inputSmall').value = null;
+    setDisplay();
+  });
+
   function setDisplay(){
     $('#currentTemperature').text(thermo.getCurrentTemperature());
     $('#currentEnergyUsage').text(thermo.ceu());
