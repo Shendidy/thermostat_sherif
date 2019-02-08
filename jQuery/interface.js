@@ -5,8 +5,14 @@ $(document).ready(function(){
 
   $('#upBtn').click(function(){
     var by = document.getElementById('inputSmall').value;
-    console.log(by);
     thermo.up(by);
+    document.getElementById('inputSmall').value = null;
+    setDisplay();
+  });
+
+  $('#downBtn').click(function(){
+    var by = document.getElementById('inputSmall').value;
+    thermo.down(by);
     document.getElementById('inputSmall').value = null;
     setDisplay();
   });
