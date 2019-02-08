@@ -39,6 +39,9 @@ Thermostat.prototype.ceu = function(){
 
 Thermostat.prototype.psmSwitch = function(){
   this._power_saving_mode = !this._power_saving_mode;
+  if (this._power_saving_mode === true && this._temperature > 25) {
+    this._temperature = 25;
+  }
 }
 
 Thermostat.prototype.getCurrentTemperature = function (){
