@@ -58,7 +58,7 @@ describe('Checking if', function(){
     expect(thermostat.getCurrentTemprature()).toEqual (20);
   });
 
-  it('set Power Saving Mode to on by using the reset function', function(){
+  it('reset() turns the Power Saving Mode to on', function(){
     thermostat.up(30);
     expect(thermostat.getCurrentTemprature()).toEqual (25);
     thermostat.psmSwitch();
