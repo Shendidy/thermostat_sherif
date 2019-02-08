@@ -23,6 +23,11 @@ $(document).ready(function(){
     setDisplay();
   });
 
+  $('#customSwitch1').click(function(){
+    thermo.psmSwitch();
+    setDisplay();
+  });
+
   function setDisplay(){
     $('#currentTemperature').text(thermo.getCurrentTemperature());
     $('#currentEnergyUsage').text(thermo.ceu());
@@ -31,10 +36,10 @@ $(document).ready(function(){
 
   function setColors(){
     var ceu = thermo.ceu();
-    if (ceu === 'low-usage'){
+    if (ceu === 'low'){
       $('#currentEnergyUsage').css('background-color', 'green')
     }
-    else if (ceu === 'medium-usage'){
+    else if (ceu === 'medium'){
       $('#currentEnergyUsage').css('background-color', 'black')
     }
     else {

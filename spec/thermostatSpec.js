@@ -80,17 +80,17 @@ describe('Checking if', function(){
 
   it ('get current energy usage for less than 18', function(){
     thermostat.down(3);
-    expect(thermostat.ceu()).toEqual('low-usage');
+    expect(thermostat.ceu()).toEqual('low');
   });
 
   it ('get current energy usage for less than 25', function(){
     thermostat.up(3);
-    expect(thermostat.ceu()).toEqual('medium-usage');
+    expect(thermostat.ceu()).toEqual('medium');
   });
 
   it ('get current energy usage for higher than 24', function(){
     thermostat.up(6);
-    expect(thermostat.ceu()).toEqual('high-usage');
+    expect(thermostat.ceu()).toEqual('high');
   });
 
   it ('switch the power saving mode on and off', function(){

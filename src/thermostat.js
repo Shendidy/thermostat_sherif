@@ -34,7 +34,7 @@ Thermostat.prototype.reset = function(){
 
 Thermostat.prototype.ceu = function(){
   var temp = this._temperature;
-  return  temp < this._LOW_ENERGY_USAGE ? "low-usage" : temp <= this._MEDIUM_ENERGY_USAGE ? "medium-usage" : "high-usage";
+  return  temp < this._LOW_ENERGY_USAGE ? "low" : temp <= this._MEDIUM_ENERGY_USAGE ? "medium" : "high";
 }
 
 Thermostat.prototype.psmSwitch = function(){
