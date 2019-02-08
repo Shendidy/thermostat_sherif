@@ -29,6 +29,7 @@ Thermostat.prototype.down = function(by){
 
 Thermostat.prototype.reset = function(){
   this._temprature = this._DEFAULT_TEMPRATURE;
+  this._power_saving_mode = true;
 }
 
 Thermostat.prototype.ceu = function(){
