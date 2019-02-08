@@ -1,3 +1,58 @@
+body {
+  background-color: darkgrey;
+   text-align: center;
+   float: center;
+}
+
+.outerFrame{
+  width:300px;
+  border: red dashed 2px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 15px;
+  background-color: white;
+}
+
+#resetBtn {
+  margin-top: 15px;
+}
+
 #resetBtn:hover {
   background: darkred;
+}
+
+#upBtn {
+  background: lightblue;
+  width: 80px;
+  position: relative;
+  left: -45px;
+  margin-bottom: 15px;
+}
+
+#downBtn {
+  background: lightblue;
+  width: 80px;
+  position: relative;
+  left: 45px;
+  margin-bottom: 15px;
+}
+
+#upBtn:hover {
+  background: orange;
+}
+
+#downBtn:hover {
+  background: green;
+}
+
+#inputSmall {
+  margin-bottom: 15px;
+}
+
+#switchDiv {
+  margin-top: 15px;
+}
+
+#switchDiv {
+  margin-top: 15px;
 }
