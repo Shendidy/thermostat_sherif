@@ -29,10 +29,14 @@ $(document).ready(function(){
     setDisplay();
   });
 
-  // This line was written just before trying AJAX!!!
+  $('#current-city').change(function() {
+    start();
+  })
+
   function start(){
-    $.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
-      thermo._temperature = data.main.temp;
+    var city = $('#current-city').val();
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=33c1172517d89daf58b94b69f8999de2&units=metric', function(data) {
+      thermo._temperature = Math.round(data.main.temp *10)/10; // *10 inside round, then /10 out of it to ensure 1 decimal!
       $('#currentTemperature').text(thermo.getCurrentTemperature());
       $('#currentEnergyUsage').text(thermo.ceu());
       setColors();
