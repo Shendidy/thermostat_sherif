@@ -1,6 +1,6 @@
 'use strict';
 
-var Thermostat = require('../src/thermostat');
+// var Thermostat = require('../src/thermostat');
 
 describe('Checking if', function(){
   var thermostat;
